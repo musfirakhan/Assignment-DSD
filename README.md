@@ -34,13 +34,14 @@ Usage Instructions
 Prepare Your Circuit Description File
 The circuit description file should define the components and their relationships in the following format:
 
-plaintext
-Copy code
+```
 INPUT <input_name>
 ADD <add_node> <input_node_1> <input_node_2>
 MUL <mul_node> <input_node_1> <input_node_2>
 REG <reg_node> <input_node>
 OUTPUT <output_node> <input_node>
+
+```
 Run the Tool
 To analyze a circuit, simply run the script. Provide the path to the circuit description file in the circuit_files list. Example:
 
@@ -54,22 +55,20 @@ Example Inputs and Outputs
 Example Circuit Input:
 Consider a circuit description file named circuit2.txt:
 
-plaintext
-Copy code
-# Circuit name: Intermediate Circuit
-# Format: <node_type> <node_id> <input_nodes...>
-
+## Circuit name: Intermediate Circuit
+## Format: <node_type> <node_id> <input_nodes...>
+```
 INPUT in1
 INPUT in2
 ADD add1 in1 in2
 MUL mul1 add1 in2
 REG reg1 mul1
 OUTPUT out1 reg1
+```
 Example Output:
 After running the analysis tool, the output might look like this:
 
-plaintext
-Copy code
+
 Processing file: circuit2.txt
 Critical Path: in1 -> add1 -> mul1 -> reg1
 Total Propagation Delay: 3.20 units
@@ -79,7 +78,7 @@ Path Details:
   - REG (reg1): 0.2 units
 The circuit graph will be rendered with the critical path (in red) highlighted.
 
-Design Decisions and Assumptions
+# Design Decisions and Assumptions
 Design Decisions:
 Directed Graph Representation:
 The circuit is represented as a directed graph where nodes represent components (such as ADD, MUL, REG), and edges represent the flow of data between components.
