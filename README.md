@@ -1,4 +1,4 @@
-# Assignment-DSD
+# Circuit Analysis Tool: Critical Path Evaluation and Visualization
 
 Circuit Analysis Tool
 Installation Instructions
