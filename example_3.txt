@@ -1,0 +1,11 @@
+# Circuit name: Complex Circuit
+# Format: <node_type> <node_id> <input_nodes...>
+
+INPUT in1
+INPUT in2
+ADD add1 in1 in2
+MUL mul1 add1 in2
+REG reg1 mul1
+MUL mul2 reg1 add1
+MUX mux1 mul2 in2
+OUTPUT out1 mux1

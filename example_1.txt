@@ -1,0 +1,6 @@
+# Circuit name: Simple Circuit
+# Format: <node_type> <node_id> <input_nodes...>
+
+INPUT in1
+ADD add1 in1
+OUTPUT out1 add1

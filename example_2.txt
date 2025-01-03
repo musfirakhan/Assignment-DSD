@@ -1,0 +1,9 @@
+# Circuit name: Intermediate Circuit
+# Format: <node_type> <node_id> <input_nodes...>
+
+INPUT in1
+INPUT in2
+ADD add1 in1 in2
+MUL mul1 add1 in2
+REG reg1 mul1
+OUTPUT out1 reg1
